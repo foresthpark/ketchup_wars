@@ -10,8 +10,7 @@ import TitleHead from "../components/TitleHead/TitleHead";
 import TitleText from "../components/Typography/TitleText";
 import useLocalStorage from "../hooks/useLocalStorage";
 
-/** @param {import('next').InferGetServerSidePropsType<typeof getServerSideProps> } props */
-export default function Home(props) {
+export default function Home() {
   const {
     data: likeData,
     error: likeError,
@@ -36,7 +35,6 @@ export default function Home(props) {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-yellow-100">
-      <TitleHead title={"Welcome to the Pixels and Pints Ketchup Wars 2021"} />
       {voted ? (
         likeData &&
         dislikeData && (

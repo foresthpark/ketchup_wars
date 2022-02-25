@@ -1,10 +1,11 @@
 import Head from "next/head";
 import React from "react";
 
-export default function TitleHead({ title, likes, dislikes }) {
+export default function TitleHead(props, { likes, dislikes }) {
+  console.log("🚀 ~ file: TitleHead.js ~ line 5 ~ TitleHead ~ likes", props);
   return (
     <Head>
-      <title>{title}</title>
+      <title>{"Welcome to the Pixels and Pints Ketchup Wars 2021"}</title>
       <meta property="og:url" content="https://ketchup.forestpark.dev" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Pixels and Pints Ketchup Wars 2021" />
@@ -25,9 +26,8 @@ export const getServerSideProps = async () => {
     .then((json) => {
       return json.data;
     });
-
   console.log(
-    "🚀 ~ file: TitleHead.js ~ line 24 ~ getServerSideProps ~ likes",
+    "🚀 ~ file: index.js ~ line 68 ~ getServerSideProps ~ likes",
     likes
   );
 
@@ -38,6 +38,11 @@ export const getServerSideProps = async () => {
     .then((json) => {
       return json.data;
     });
+
+  console.log(
+    "🚀 ~ file: index.js ~ line 76 ~ getServerSideProps ~ dislikes",
+    dislikes
+  );
 
   return {
     props: {
