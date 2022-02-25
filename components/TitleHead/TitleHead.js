@@ -22,13 +22,13 @@ export const getServerSideProps = async () => {
   const likes = await fetch("/api/likes")
     .then((response) => response.json())
     .then((json) => {
-      return json;
+      return json.data;
     });
 
   const dislikes = await fetch("/api/dislikes")
     .then((response) => response.json())
     .then((json) => {
-      return json;
+      return json.data;
     });
 
   return {
