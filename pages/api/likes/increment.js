@@ -3,7 +3,7 @@ import client from "../../../libs/server/prisma";
 export default async function handler(req, res) {
   const likes = await client.likes.update({
     where: {
-      id: "ckzs10dl60000d4vyn75qhrgi",
+      id: "ckzz5lwuz00319lvyrczo7ukd",
     },
     data: {
       count: {
