@@ -6,6 +6,7 @@ import ActionButtonContainer from "../components/ActionButtonContainer/ActionBut
 import KetchupButton from "../components/KetchupButton/KetchupButton";
 import KetchupChart from "../components/KetchupChart/KetchupChart";
 import KetchupStack from "../components/KetchupStack/KetchupStack";
+import TitleHead from "../components/TitleHead/TitleHead";
 import TitleText from "../components/Typography/TitleText";
 import useLocalStorage from "../hooks/useLocalStorage";
 
@@ -34,6 +35,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-yellow-100">
+      <TitleHead title={"Welcome to the Pixels and Pints Ketchup Wars 2021"} />
       {voted ? (
         likeData &&
         dislikeData && (

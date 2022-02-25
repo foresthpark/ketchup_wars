@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "connectdb": "pscale org switch tests && pscale connect ketchup"
+    "connectdb": "pscale org switch tests && pscale connect ketchup",
+    "studio": "prisma studio"
   },
   "dependencies": {
     "@prisma/client": "^3.10.0",
