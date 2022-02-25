@@ -18,14 +18,22 @@ export default function TitleHead({ title, likes, dislikes }) {
 }
 
 export const getServerSideProps = async () => {
-  let photo = null;
-  const likes = await fetch("/api/likes")
+  const likes = await fetch(
+    "https://ketchup-wars-8sw153vxf-foresthpark.vercel.app/api/likes"
+  )
     .then((response) => response.json())
     .then((json) => {
       return json.data;
     });
 
-  const dislikes = await fetch("/api/dislikes")
+  console.log(
+    "🚀 ~ file: TitleHead.js ~ line 24 ~ getServerSideProps ~ likes",
+    likes
+  );
+
+  const dislikes = await fetch(
+    "https://ketchup-wars-8sw153vxf-foresthpark.vercel.app/api/dislikes"
+  )
     .then((response) => response.json())
     .then((json) => {
       return json.data;
