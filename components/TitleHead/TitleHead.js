@@ -10,7 +10,7 @@ export default function TitleHead({ title, likes, dislikes }) {
       <meta property="og:title" content="Pixels and Pints Ketchup Wars 2021" />
       <meta
         property="og:description"
-        content={`You can help settle a debate that divided a whole community... Likes: ${likes} Dislikes: ${dislikes}`}
+        content={`You can help settle a debate that divided a whole community...Current Likes: ${likes} Dislikes: ${dislikes}`}
       />
       <meta property="og:image" content={"https://i.imgur.com/eI77AcX.png"} />
     </Head>

@@ -10,7 +10,8 @@ import TitleHead from "../components/TitleHead/TitleHead";
 import TitleText from "../components/Typography/TitleText";
 import useLocalStorage from "../hooks/useLocalStorage";
 
-export default function Home() {
+/** @param {import('next').InferGetServerSidePropsType<typeof getServerSideProps> } props */
+export default function Home(props) {
   const {
     data: likeData,
     error: likeError,
