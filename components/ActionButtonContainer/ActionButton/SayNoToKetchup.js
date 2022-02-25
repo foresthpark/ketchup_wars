@@ -24,7 +24,7 @@ export default function SayNoToKetchup({ mutate }) {
       }}
       className="p-4 hover:ring-2 hover:ring-rose-400 bg-red-400 ring-offset-2 m-4 rounded-xl text-white font-normal"
     >
-      Ewwww, ketchup sucks!
+      {loading ? "Shaking the ketchup bottle..." : "Ewwww, ketchup sucks!"}
     </motion.button>
   );
 }
